@@ -1,0 +1,14 @@
+#!/bin/bash -login
+### define resources needed:
+#SBATCH --time=4:00:00
+#SBATCH --nodes=1
+#SBATCH --mem=100G
+#SBATCH --cpus-per-task=1
+#SBATCH --job-name=Proj
+#SBATCH --output=slurm-%x-%j.out
+module load powertools
+umask g+rw
+
+
+cd /mnt/home/jevticfi/repos/Scratchwork
+python Final_project.py
